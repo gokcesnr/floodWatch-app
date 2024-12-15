@@ -3,8 +3,17 @@
   <header class="fixed-header">
     <img src="assets/logo.png" alt="FloodWatch Logo" class="logo" />
     <div class="title-container">
-      <h1>FloodWatch</h1>
+      <h1 class="headerStyle">FloodWatch</h1>
     </div>
+    <div class="search">
+      <div class="city-dropdown-container">
+        <mat-form-field appearance="fill" class="city-dropdown">
+          <mat-select placeholder="Select City" (selectionChange)="openCityModal($event.value)">
+            <mat-option *ngFor="let city of cities" [value]="city">{{ city }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>    
+    </div> 
   </header>
 
   <!-- Main Content -->

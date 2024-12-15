@@ -1,1 +1,53 @@
-<p>prediction-modal works!</p>
+<h2 mat-dialog-title>Predict Flood Possibility</h2>
+<mat-dialog-content>
+  <form [formGroup]="predictionForm">
+    <mat-form-field appearance="fill">
+      <mat-label>Rainfall</mat-label>
+      <input matInput formControlName="rainfall" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Temperature</mat-label>
+      <input matInput formControlName="temperature" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Humidity</mat-label>
+      <input matInput formControlName="humidity" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>River Discharge</mat-label>
+      <input matInput formControlName="riverDischarge" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Water Level</mat-label>
+      <input matInput formControlName="waterLevel" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Elevation</mat-label>
+      <input matInput formControlName="elevation" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Population Density</mat-label>
+      <input matInput formControlName="populationDensity" type="number" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Land Cover</mat-label>
+      <input matInput formControlName="landCover" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Soil Type</mat-label>
+      <input matInput formControlName="soilType" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Infrastructure</mat-label>
+      <input matInput formControlName="infrastructure" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Historical Floods</mat-label>
+      <textarea matInput formControlName="historicalFloods"></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-raised-button color="primary" (click)="submitPrediction()">Predict</button>
+</mat-dialog-actions>

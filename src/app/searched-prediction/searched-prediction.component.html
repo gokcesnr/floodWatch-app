@@ -1,0 +1,16 @@
+<h2>{{ cityName }} - Weather and Flood Risk</h2>
+
+<div class="modal-content">
+  <p><strong>Weather:</strong></p>
+  <ul>
+    <li>Temperature: {{ weatherData.temperature }}</li>
+    <li>Condition: {{ weatherData.condition }}</li>
+  </ul>
+
+  <p><strong>Flood Risk Level:</strong></p>
+  <p class="flood-risk">{{ floodRiskLevel }}</p>
+</div>
+
+<div class="modal-actions">
+  <button mat-button mat-dialog-close>Close</button>
+</div>

@@ -2,3 +2,16 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Header styling */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+/* General styling */
+body, p, span, a, button, input, textarea {
+    font-family: 'Mulish', sans-serif;
+}

@@ -1,0 +1,38 @@
+h2 {
+    margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    color: #091057;
+  }
+  
+  .modal-content {
+    font-family: "Mulish", serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .flood-risk {
+    font-weight: bold;
+    color: #0077cc;
+  }
+  
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
+  button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  

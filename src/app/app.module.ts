@@ -14,7 +14,14 @@ import { AppComponent } from './app.component';
 import { FloodDashboardComponent } from './flood-dashboard/flood-dashboard.component';
 import { PastFloodTableComponent } from './past-flood-table/past-flood-table.component';
 import { FutureFloodTableComponent } from './future-flood-table/future-flood-table.component';
-import { MapComponent } from './map/map.component'; // Add this if app-map is part of your app
+import { MapComponent } from './map/map.component';
+import { SearchedPredictionComponent } from './searched-prediction/searched-prediction.component'; // Add this if app-map is part of your app
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatDialogModule } from '@angular/material/dialog';
+import { PredictionModalComponent } from './prediction-modal/prediction-modal.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 // Routes
 const routes: Routes = [
@@ -29,18 +36,25 @@ const routes: Routes = [
     FloodDashboardComponent,
     PastFloodTableComponent,
     FutureFloodTableComponent,
-    MapComponent // Declare the MapComponent for app-map
+    MapComponent,
+    SearchedPredictionComponent,
+    PredictionModalComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     MatCardModule,
     MatTableModule,
     MatPaginatorModule,
     MatButtonModule,
-    RouterModule.forRoot(routes)
+    MatFormFieldModule, // Added
+    MatSelectModule, // Added
+    MatOptionModule, // Added
+    MatDialogModule, // Added
+    RouterModule.forRoot(routes),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
