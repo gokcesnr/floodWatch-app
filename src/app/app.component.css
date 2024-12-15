@@ -1,0 +1,92 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #8EACCD; /* Background from old CSS */
+    font-family: "Mulish", serif; /* Font family from old CSS */
+    margin: 0;
+    padding: 0;
+  }
+  
+  .fixed-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #D2E0FB; /* Deep blue */
+    color: #091057; /* Dark blue text color */
+    padding: 10px 20px;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-family: "Montserrat Underline", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  
+    display: flex; /* Flexbox layout */
+    justify-content: space-between; /* Space out logo and text container */
+    align-items: center; /* Vertically align items */
+  }
+  
+  .fixed-header .logo {
+    height: 50px; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+  }
+  
+  .fixed-header .title-container {
+    flex: 1; /* Allow the title container to occupy remaining space */
+    text-align: center; /* Center the text inside this container */
+  }
+  
+  .fixed-header h1 {
+    margin: 0; /* Remove default margin for better alignment */
+    font-size: 24px;
+  }
+  
+  .app-footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #D2E0FB;
+    color: #091057;
+    text-align: center;
+    padding: 10px;
+    font-family: "Mulish", serif;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .app-body {
+    flex: 1;
+    margin-top: 75px; /* Adjust based on header height */
+    margin-bottom: 50px; /* Adjust based on footer height */
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #8EACCD; /* Maintain consistent background */
+  }
+  
+  .dashboard {
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .map-container {
+    height: 400px;
+    width: 100%;
+  }
+  
+  .tables-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .table {
+    flex: 1;
+  }
+  
+  .table_header {
+    font-family: "Mulish", serif;
+    color: #091057;
+  }
+  

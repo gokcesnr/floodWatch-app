@@ -1,0 +1,22 @@
+<mat-card>
+    <mat-card-title>Past Floods</mat-card-title>
+    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="date">
+        <mat-header-cell *matHeaderCellDef> Date </mat-header-cell>
+        <mat-cell *matCellDef="let flood"> {{ flood.date }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="area">
+        <mat-header-cell *matHeaderCellDef> Area </mat-header-cell>
+        <mat-cell *matCellDef="let flood"> {{ flood.area }} </mat-cell>
+      </ng-container>
+      <ng-container matColumnDef="severity">
+        <mat-header-cell *matHeaderCellDef> Severity </mat-header-cell>
+        <mat-cell *matCellDef="let flood"> {{ flood.severity }} </mat-cell>
+      </ng-container>
+  
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+    <mat-paginator [pageSize]="5" showFirstLastButtons></mat-paginator>
+  </mat-card>
+  

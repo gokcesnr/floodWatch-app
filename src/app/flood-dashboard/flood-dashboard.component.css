@@ -1,0 +1,21 @@
+.map-container {
+    height: 50vh; /* Map takes up 50% of the viewport height */
+    width: 100%; /* Map spans the full width of the container */
+    margin-bottom: 20px; /* Add some spacing below the map */
+    border: 1px solid #ccc; /* Optional: Add a border for clarity */
+    overflow: hidden; /* Prevent content from overflowing the container */
+  }
+  
+  .dashboard {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px;
+  }
+  
+  app-past-floods-table,
+  app-future-floods-table {
+    flex: 1;
+    min-width: 48%;
+  }
+    
