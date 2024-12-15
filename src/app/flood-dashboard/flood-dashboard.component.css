@@ -1,21 +1,26 @@
 .map-container {
-    height: 50vh; /* Map takes up 50% of the viewport height */
-    width: 100%; /* Map spans the full width of the container */
-    margin-bottom: 20px; /* Add some spacing below the map */
-    border: 1px solid #ccc; /* Optional: Add a border for clarity */
-    overflow: hidden; /* Prevent content from overflowing the container */
-  }
-  
-  .dashboard {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-    padding: 16px;
-  }
-  
-  app-past-floods-table,
-  app-future-floods-table {
-    flex: 1;
-    min-width: 48%;
-  }
-    
+  height: 50vh; /* Map takes up 50% of the viewport height */
+  width: 100%; /* Map spans the full width of the container */
+  margin-bottom: 20px; /* Add some spacing below the map */
+  border: 1px solid #ccc; /* Optional: Add a border for clarity */
+  overflow: hidden; /* Prevent content from overflowing the container */
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column; /* Stack tables vertically */
+  align-items: center; /* Center tables horizontally */
+  gap: 10px; /* Reduce space between tables */
+  padding: 16px;
+}
+
+app-past-flood-table,
+app-future-flood-table {
+  width: 90%; /* Make tables take up more space */
+  max-width: 1200px; /* Optional: Add a maximum width for larger screens */
+}
+
+button {
+  margin-top: 20px; /* Add space above the button */
+  align-self: center; /* Center the button horizontally */
+}

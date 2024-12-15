@@ -1,53 +1,62 @@
-<h2 mat-dialog-title>Predict Flood Possibility</h2>
-<mat-dialog-content>
-  <form [formGroup]="predictionForm">
-    <mat-form-field appearance="fill">
+<h2 mat-dialog-title class="modal-title">Predict Flood Possibility</h2>
+<mat-dialog-content class="modal-content">
+  <form [formGroup]="predictionForm" class="form-container">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Rainfall</mat-label>
-      <input matInput formControlName="rainfall" type="number" />
+      <input matInput formControlName="rainfall" type="number" placeholder="Enter rainfall in mm" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Temperature</mat-label>
-      <input matInput formControlName="temperature" type="number" />
+      <input matInput formControlName="temperature" type="number" placeholder="Enter temperature in °C" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Humidity</mat-label>
-      <input matInput formControlName="humidity" type="number" />
+      <input matInput formControlName="humidity" type="number" placeholder="Enter humidity in %" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>River Discharge</mat-label>
-      <input matInput formControlName="riverDischarge" type="number" />
+      <input matInput formControlName="riverDischarge" type="number" placeholder="Enter river discharge in m³/s" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Water Level</mat-label>
-      <input matInput formControlName="waterLevel" type="number" />
+      <input matInput formControlName="waterLevel" type="number" placeholder="Enter water level in meters" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Elevation</mat-label>
-      <input matInput formControlName="elevation" type="number" />
+      <input matInput formControlName="elevation" type="number" placeholder="Enter elevation in meters" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Population Density</mat-label>
-      <input matInput formControlName="populationDensity" type="number" />
+      <input matInput formControlName="populationDensity" type="number" placeholder="Enter population density (people/km²)" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Land Cover</mat-label>
-      <input matInput formControlName="landCover" />
+      <input matInput formControlName="landCover" placeholder="Enter land cover type" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Soil Type</mat-label>
-      <input matInput formControlName="soilType" />
+      <input matInput formControlName="soilType" placeholder="Enter soil type" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline" class="full-width">
       <mat-label>Infrastructure</mat-label>
-      <input matInput formControlName="infrastructure" />
+      <input matInput formControlName="infrastructure" placeholder="Enter infrastructure type" />
     </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Historical Floods</mat-label>
-      <textarea matInput formControlName="historicalFloods"></textarea>
-    </mat-form-field>
+    <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Historical Floods</mat-label>
+        <input
+          matInput
+          formControlName="historicalFloods"
+          placeholder="Enter 1 (Yes) or 0 (No)"
+          type="text"
+          (input)="validateHistoricalFloods()"
+        />
+        <mat-error *ngIf="predictionForm.get('historicalFloods')?.invalid">
+          Please enter 1 (Yes) or 0 (No).
+        </mat-error>
+      </mat-form-field>      
   </form>
 </mat-dialog-content>
-<mat-dialog-actions align="end">
+<mat-dialog-actions align="end" class="modal-actions">
   <button mat-button mat-dialog-close>Cancel</button>
   <button mat-raised-button color="primary" (click)="submitPrediction()">Predict</button>
 </mat-dialog-actions>

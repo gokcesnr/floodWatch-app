@@ -35,4 +35,11 @@ h2 {
   button:hover {
     background-color: #005fa3;
   }
+
+  .modal-container{
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
   

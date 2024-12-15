@@ -1,0 +1,64 @@
+/* General Modal Styles */
+mat-dialog-content {
+    max-height: 70vh; /* Prevent modal overflow */
+    overflow: auto;
+    padding: 20px; /* Add padding for better appearance */
+    border-radius: 8px; /* Rounded corners for the modal */
+  }
+  
+  /* Input Field Styles */
+  mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  /* Outline Input Style */
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: #5A5A5A; /* Customize the outline color */
+  }
+  
+  /* Button Styles */
+  mat-dialog-actions button {
+    font-weight: bold;
+  }
+  
+  button[mat-raised-button] {
+    text-transform: uppercase; /* Make button text uppercase */
+    padding: 10px 20px; /* Add padding for buttons */
+  }
+/* Background color for the entire modal */
+::ng-deep .mat-dialog-container {
+  background-color: #D2E0FB;
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners for a smoother look */
+}
+
+/* Ensure all form fields take full width */
+.full-width {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Title styling */
+.modal-title {
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Form container to add spacing */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Button alignment */
+.modal-actions button {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px 20px;
+}
+  
